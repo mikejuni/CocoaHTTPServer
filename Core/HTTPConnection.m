@@ -704,7 +704,7 @@ static NSMutableArray *recentNonces;
 				key   = (__bridge_transfer NSString *)k;
 				
 				if (key)
-					[result setObject:[NSNull null] forKey:key];
+					[result setObject:@"" forKey:key];
 			}
 		}
 	}
