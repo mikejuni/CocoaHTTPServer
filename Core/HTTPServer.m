@@ -413,7 +413,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 		success = [asyncSocket acceptOnInterface:interface port:port error:&err];
 		if (success)
 		{
-			HTTPLogInfo(@"%@: Started HTTP server on port %hu", THIS_FILE, [asyncSocket localPort]);
+			HTTPLogInfo(@"%@: Started HTTP server on port %hu %@", THIS_FILE, [asyncSocket localPort],[asyncSocket localHost]);
 			
 			isRunning = YES;
 			[self publishBonjour];
